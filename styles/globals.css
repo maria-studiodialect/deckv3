@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Sharp Sans';
+    src: url('../public/fonts/Sharp Sans.otf');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'Editorial Regular';
+    src: url('../public/fonts/Editorial New Regular 400.otf');
+    font-weight: normal;
+}
+
+
+@font-face {
+    font-family: 'Editorial Light';
+    src: url('../public/fonts/EditorialNew-Ultralight.otf');
+    font-weight: lighter;
+}
+
+
+
+@font-face {
+    font-family: 'Shameless';
+    src: url('../public/fonts/Shameless Deluxe.otf');
+    font-weight: lighter;
+}
+
+.vertical {
+    writing-mode: vertical-rl;
+}
+
+body {
+    font-family: 'Sharp Sans';
+    background-color: #F7F4EE;
+}
+
+.range {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background: #2F2727;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    transform: scale(1);
+    background: #2F2727;
+    background: url('/noarrow-control.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transform-origin: center center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.range::-webkit-slider-thumb:hover {
+    transform: scale(3.5);
+    background: url('/control.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+input.checked::before {
+    content: "✓";
+    font-size: 0.85em;
+    color: black;
+    position: absolute;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    top: 18%;
+    left: 34%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #e9e6df; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #79746c; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #504940; 
+  }
+
+  .react-modal-sheet-header,.react-modal-sheet-content  {
+    background-color: #F7F4EE;
+  }
+
+  .react-modal-sheet-backdrop {
+    background-color: transparent !important;
+    pointer-events: none !important;
+  }
+
+  .embla {
+    --slide-spacing: 0.8rem;
+    --slide-size: 65%;
+    overflow: hidden;
+  }
+  
+  .embla__container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .embla__slide {
+    flex: 0 0 65%;
+    min-width: 0;
+    padding-left:  var(--slide-spacing);
+    position: relative;
+  }
+  
+  .underline-small::after{
+    content:'';
+    height:2px;
+    width:10%;
+    background:#2F2727;
+    position:absolute;
+    left:calc(50% - 3%);
+    bottom: 5px;
+  }
