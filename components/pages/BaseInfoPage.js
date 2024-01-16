@@ -79,7 +79,7 @@ const BaseInfoPage = ({onNextStep, onPrevStep, handleSize}) => {
       alert('Please fill in the required fields: height and weight');
       return;
     }
-    if (height > '211') {
+    if (parseFloat(height) > 211) {
       alert('Please get in touch');
       return;
     }
