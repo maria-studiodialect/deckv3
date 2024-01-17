@@ -104,6 +104,8 @@ const BaseInfoPage = ({onNextStep, onPrevStep, handleSize}) => {
         : weightUnit === 'lb' 
           ? weight * 0.453592 
           : weight * 6.35029;
+
+    console.log(weightInKg)
   
 
       // Calculate BMI
