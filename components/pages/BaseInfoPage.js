@@ -99,8 +99,13 @@ const BaseInfoPage = ({onNextStep, onPrevStep, handleSize}) => {
     const calculateMeasurements = () => {
       // Convert height and weight to the required units
       const heightInCm = heightUnit === 'cm' ? height : height * 2.54;
-      const weightInKg = weightUnit === 'kg' ? weight : weight * 0.453592;
+      const weightInKg = weightUnit === 'kg' 
+        ? weight 
+        : weightUnit === 'lb' 
+          ? weight * 0.453592 
+          : weight * 6.35029;
   
+
       // Calculate BMI
       const BMI = weightInKg / ((heightInCm / 100) * (heightInCm / 100));
   
